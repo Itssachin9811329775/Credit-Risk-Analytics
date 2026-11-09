@@ -1,0 +1,9 @@
+# Direct dependencies for stages 1-7. Python 3.14 needs recent binary wheels.
+# The setup script saves exact installed versions in requirements-lock.txt.
+numpy>=2.3.2,<3
+pandas>=2.3.3,<3
+matplotlib>=3.10.7,<4
+seaborn==0.13.2
+xlrd>=2.0.2,<3
+# SQLite, urllib (downloads), and zipfile are part of Python.
+# scikit-learn will be considered only after the core analysis is complete.

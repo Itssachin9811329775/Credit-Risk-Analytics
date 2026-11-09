@@ -1,0 +1,29 @@
+# Local Python environment and caches
+.venv/
+__pycache__/
+*.py[cod]
+.cache/
+.ipynb_checkpoints/
+
+# Keep folder placeholders; reproduce data from the documented UCI source.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/exports/*
+!data/exports/.gitkeep
+database/*
+!database/.gitkeep
+
+# Machine-specific setup output
+reports/environment_check.json
+
+# Exclude large binary dashboards; Power BI templates can be tracked separately.
+*.pbix
+.pbi/
+
+# Temporary files and local credentials
+*.tmp
+.env
+.env.*
+!.env.example

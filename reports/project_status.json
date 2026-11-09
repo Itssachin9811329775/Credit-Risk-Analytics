@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-11-03T04:36:29.119676+00:00",
+  "core_complete": true,
+  "powerbi_dashboard_created": true,
+  "completed_stages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "optional_model": "not_included",
+  "powerbi_runtime_verified": true,
+  "finished_at_utc": "2026-11-03T04:37:26.544038+00:00",
+  "powerbi_verified_at_utc": "2026-11-04T08:09:33.242258+00:00"
+}

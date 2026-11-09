@@ -1,0 +1,771 @@
+{
+  "status": "passed",
+  "validated_at_utc": "2026-11-04T08:06:19.204962+00:00",
+  "engine": "Power BI Desktop local Analysis Services / ADOMD.NET",
+  "queried_at_utc": "2026-11-04T08:01:43.9710138Z",
+  "method": "Actual ADOMD.NET DAX results compared with independent Pandas calculations from validated exports.",
+  "measures": {
+    "customer_count": "Customer Count",
+    "outcome_customers": "Outcome Customers",
+    "defaulting_customers": "Defaulting Customers",
+    "default_rate": "Default Rate",
+    "credit_limit_ntd": "Credit Limit NTD",
+    "monthly_rows": "Monthly Rows",
+    "monthly_customers": "Monthly Customers",
+    "documented_delay_rows": "Documented Delay Rows",
+    "documented_delay_share": "Documented Delay Share",
+    "undocumented_status_rows": "Undocumented Status Rows",
+    "undocumented_status_share": "Undocumented Status Share",
+    "recorded_payments_ntd": "Recorded Payments NTD",
+    "single_month_bill_ntd": "Single Month Bill NTD",
+    "negative_bill_rows": "Negative Bill Rows",
+    "cohort_customers": "Selected History Customers",
+    "cohort_defaulting_customers": "Defaults in Selected History Cohort",
+    "cohort_default_rate": "Selected History Cohort Default Rate",
+    "cohort_credit_limit_ntd": "Credit Limit in Selected History Cohort NTD"
+  },
+  "checks": [
+    {
+      "scenario": "Baseline",
+      "measure": "Customer Count",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Outcome Customers",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Defaulting Customers",
+      "actual": 6636,
+      "expected": 6636,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Default Rate",
+      "actual": 0.2212,
+      "expected": 0.2212,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Credit Limit NTD",
+      "actual": 5024529680,
+      "expected": 5024529680,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Monthly Rows",
+      "actual": 180000,
+      "expected": 180000,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Monthly Customers",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Documented Delay Rows",
+      "actual": 25026,
+      "expected": 25026,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Documented Delay Share",
+      "actual": 0.13903333333333334,
+      "expected": 0.13903333333333334,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Undocumented Status Rows",
+      "actual": 120334,
+      "expected": 120334,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Undocumented Status Share",
+      "actual": 0.6685222222222222,
+      "expected": 0.6685222222222222,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Recorded Payments NTD",
+      "actual": 949541777,
+      "expected": 949541777,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Single Month Bill NTD",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Negative Bill Rows",
+      "actual": 3932,
+      "expected": 3932,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Selected History Customers",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Defaults in Selected History Cohort",
+      "actual": 6636,
+      "expected": 6636,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Selected History Cohort Default Rate",
+      "actual": 0.2212,
+      "expected": 0.2212,
+      "passed": true
+    },
+    {
+      "scenario": "Baseline",
+      "measure": "Credit Limit in Selected History Cohort NTD",
+      "actual": 5024529680,
+      "expected": 5024529680,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Customer Count",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Outcome Customers",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Defaulting Customers",
+      "actual": 6636,
+      "expected": 6636,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Default Rate",
+      "actual": 0.2212,
+      "expected": 0.2212,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Credit Limit NTD",
+      "actual": 5024529680,
+      "expected": 5024529680,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Monthly Rows",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Monthly Customers",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Documented Delay Rows",
+      "actual": 6818,
+      "expected": 6818,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Documented Delay Share",
+      "actual": 0.22726666666666667,
+      "expected": 0.22726666666666667,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Undocumented Status Rows",
+      "actual": 17496,
+      "expected": 17496,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Undocumented Status Share",
+      "actual": 0.5832,
+      "expected": 0.5832,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Recorded Payments NTD",
+      "actual": 169907415,
+      "expected": 169907415,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Single Month Bill NTD",
+      "actual": 1536699927,
+      "expected": 1536699927,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Negative Bill Rows",
+      "actual": 590,
+      "expected": 590,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Selected History Customers",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Defaults in Selected History Cohort",
+      "actual": 6636,
+      "expected": 6636,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Selected History Cohort Default Rate",
+      "actual": 0.2212,
+      "expected": 0.2212,
+      "passed": true
+    },
+    {
+      "scenario": "September",
+      "measure": "Credit Limit in Selected History Cohort NTD",
+      "actual": 5024529680,
+      "expected": 5024529680,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Customer Count",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Outcome Customers",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Defaulting Customers",
+      "actual": 6636,
+      "expected": 6636,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Default Rate",
+      "actual": 0.2212,
+      "expected": 0.2212,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Credit Limit NTD",
+      "actual": 5024529680,
+      "expected": 5024529680,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Monthly Rows",
+      "actual": 3130,
+      "expected": 3130,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Monthly Customers",
+      "actual": 3130,
+      "expected": 3130,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Documented Delay Rows",
+      "actual": 3130,
+      "expected": 3130,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Documented Delay Share",
+      "actual": 1,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Undocumented Status Rows",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Undocumented Status Share",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Recorded Payments NTD",
+      "actual": 9894196,
+      "expected": 9894196,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Single Month Bill NTD",
+      "actual": 197038144,
+      "expected": 197038144,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Negative Bill Rows",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Selected History Customers",
+      "actual": 3130,
+      "expected": 3130,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Defaults in Selected History Cohort",
+      "actual": 2177,
+      "expected": 2177,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Selected History Cohort Default Rate",
+      "actual": 0.6955271565495208,
+      "expected": 0.6955271565495208,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ months delay",
+      "measure": "Credit Limit in Selected History Cohort NTD",
+      "actual": 335846000,
+      "expected": 335846000,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Customer Count",
+      "actual": 4311,
+      "expected": 4311,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Outcome Customers",
+      "actual": 4311,
+      "expected": 4311,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Defaulting Customers",
+      "actual": 1555,
+      "expected": 1555,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Default Rate",
+      "actual": 0.3607051728137323,
+      "expected": 0.3607051728137323,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Credit Limit NTD",
+      "actual": 101982000,
+      "expected": 101982000,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Monthly Rows",
+      "actual": 853,
+      "expected": 853,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Monthly Customers",
+      "actual": 853,
+      "expected": 853,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Documented Delay Rows",
+      "actual": 853,
+      "expected": 853,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Documented Delay Share",
+      "actual": 1,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Undocumented Status Rows",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Undocumented Status Share",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Recorded Payments NTD",
+      "actual": 1163009,
+      "expected": 1163009,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Single Month Bill NTD",
+      "actual": 14489156,
+      "expected": 14489156,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Negative Bill Rows",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Selected History Customers",
+      "actual": 853,
+      "expected": 853,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Defaults in Selected History Cohort",
+      "actual": 597,
+      "expected": 597,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Selected History Cohort Default Rate",
+      "actual": 0.6998827667057445,
+      "expected": 0.6998827667057445,
+      "passed": true
+    },
+    {
+      "scenario": "September / 2+ delay / below 50k",
+      "measure": "Credit Limit in Selected History Cohort NTD",
+      "actual": 20966000,
+      "expected": 20966000,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Customer Count",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Outcome Customers",
+      "actual": 30000,
+      "expected": 30000,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Defaulting Customers",
+      "actual": 6636,
+      "expected": 6636,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Default Rate",
+      "actual": 0.2212,
+      "expected": 0.2212,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Credit Limit NTD",
+      "actual": 5024529680,
+      "expected": 5024529680,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Monthly Rows",
+      "actual": 7540,
+      "expected": 7540,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Monthly Customers",
+      "actual": 5401,
+      "expected": 5401,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Documented Delay Rows",
+      "actual": 7540,
+      "expected": 7540,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Documented Delay Share",
+      "actual": 1,
+      "expected": 1.0,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Undocumented Status Rows",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Undocumented Status Share",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Recorded Payments NTD",
+      "actual": 22429329,
+      "expected": 22429329,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Single Month Bill NTD",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Negative Bill Rows",
+      "actual": 11,
+      "expected": 11,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Selected History Customers",
+      "actual": 5401,
+      "expected": 5401,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Defaults in Selected History Cohort",
+      "actual": 3122,
+      "expected": 3122,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Selected History Cohort Default Rate",
+      "actual": 0.578041103499352,
+      "expected": 0.578041103499352,
+      "passed": true
+    },
+    {
+      "scenario": "Aug-Sep / 2+ months delay",
+      "measure": "Credit Limit in Selected History Cohort NTD",
+      "actual": 578396000,
+      "expected": 578396000,
+      "passed": true
+    }
+  ],
+  "scenarios": {
+    "Baseline": {
+      "customer_count": 30000,
+      "outcome_customers": 30000,
+      "defaulting_customers": 6636,
+      "default_rate": 0.2212,
+      "credit_limit_ntd": 5024529680,
+      "monthly_rows": 180000,
+      "monthly_customers": 30000,
+      "documented_delay_rows": 25026,
+      "documented_delay_share": 0.13903333333333334,
+      "undocumented_status_rows": 120334,
+      "undocumented_status_share": 0.6685222222222222,
+      "recorded_payments_ntd": 949541777,
+      "single_month_bill_ntd": null,
+      "negative_bill_rows": 3932,
+      "cohort_customers": 30000,
+      "cohort_defaulting_customers": 6636,
+      "cohort_default_rate": 0.2212,
+      "cohort_credit_limit_ntd": 5024529680
+    },
+    "September": {
+      "customer_count": 30000,
+      "outcome_customers": 30000,
+      "defaulting_customers": 6636,
+      "default_rate": 0.2212,
+      "credit_limit_ntd": 5024529680,
+      "monthly_rows": 30000,
+      "monthly_customers": 30000,
+      "documented_delay_rows": 6818,
+      "documented_delay_share": 0.22726666666666667,
+      "undocumented_status_rows": 17496,
+      "undocumented_status_share": 0.5832,
+      "recorded_payments_ntd": 169907415,
+      "single_month_bill_ntd": 1536699927,
+      "negative_bill_rows": 590,
+      "cohort_customers": 30000,
+      "cohort_defaulting_customers": 6636,
+      "cohort_default_rate": 0.2212,
+      "cohort_credit_limit_ntd": 5024529680
+    },
+    "September / 2+ months delay": {
+      "customer_count": 30000,
+      "outcome_customers": 30000,
+      "defaulting_customers": 6636,
+      "default_rate": 0.2212,
+      "credit_limit_ntd": 5024529680,
+      "monthly_rows": 3130,
+      "monthly_customers": 3130,
+      "documented_delay_rows": 3130,
+      "documented_delay_share": 1,
+      "undocumented_status_rows": null,
+      "undocumented_status_share": null,
+      "recorded_payments_ntd": 9894196,
+      "single_month_bill_ntd": 197038144,
+      "negative_bill_rows": null,
+      "cohort_customers": 3130,
+      "cohort_defaulting_customers": 2177,
+      "cohort_default_rate": 0.6955271565495208,
+      "cohort_credit_limit_ntd": 335846000
+    },
+    "September / 2+ delay / below 50k": {
+      "customer_count": 4311,
+      "outcome_customers": 4311,
+      "defaulting_customers": 1555,
+      "default_rate": 0.3607051728137323,
+      "credit_limit_ntd": 101982000,
+      "monthly_rows": 853,
+      "monthly_customers": 853,
+      "documented_delay_rows": 853,
+      "documented_delay_share": 1,
+      "undocumented_status_rows": null,
+      "undocumented_status_share": null,
+      "recorded_payments_ntd": 1163009,
+      "single_month_bill_ntd": 14489156,
+      "negative_bill_rows": null,
+      "cohort_customers": 853,
+      "cohort_defaulting_customers": 597,
+      "cohort_default_rate": 0.6998827667057445,
+      "cohort_credit_limit_ntd": 20966000
+    },
+    "Aug-Sep / 2+ months delay": {
+      "customer_count": 30000,
+      "outcome_customers": 30000,
+      "defaulting_customers": 6636,
+      "default_rate": 0.2212,
+      "credit_limit_ntd": 5024529680,
+      "monthly_rows": 7540,
+      "monthly_customers": 5401,
+      "documented_delay_rows": 7540,
+      "documented_delay_share": 1,
+      "undocumented_status_rows": null,
+      "undocumented_status_share": null,
+      "recorded_payments_ntd": 22429329,
+      "single_month_bill_ntd": null,
+      "negative_bill_rows": 11,
+      "cohort_customers": 5401,
+      "cohort_defaulting_customers": 3122,
+      "cohort_default_rate": 0.578041103499352,
+      "cohort_credit_limit_ntd": 578396000
+    }
+  },
+  "scope": "DAX runtime validation only; report layout, interactions and saved PBIX require separate Desktop checks.",
+  "file_sha256": {
+    "data/exports/customers.csv": "4cf20b74dd07581f4df9e4b7f9c35627df183265e4eb846e7417c30cd078b270",
+    "data/exports/monthly_repayments.csv": "793cb35a5db13604c7ebf85b5f35daf0672750479255643b9957f14be08c6080",
+    "data/exports/default_outcomes.csv": "cef9f3ac218fdc2795ecbfbdbdba2c88cb91df20e59988aa75205acdf7b6f7f2",
+    "data/exports/calendar_months.csv": "169314ccabf6549076901da9f5bdd305db0336d7168011dda5ea75d033994da4",
+    "powerbi/validation_all_measures.dax": "229a294516ae24d99003350c45ab2f5208d3001a89ab954d1fcf86ed2d856c47",
+    "reports/powerbi_all_measures_results.json": "3bb539f3621d5c612708bebaf6a4c247ac82ae1b5340e925555260bec7ce49a5",
+    "powerbi/measures.dax": "dfcfab01dc183de9d83b6c43e3d4b1d454c52c6a62dddeac7e2196a42306cef8"
+  }
+}

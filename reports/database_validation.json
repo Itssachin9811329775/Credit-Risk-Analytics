@@ -1,0 +1,269 @@
+{
+  "stage": 3,
+  "status": "passed",
+  "mode": "build",
+  "run_at_utc": "2026-11-03T04:36:42.374723+00:00",
+  "sqlite_version": "3.50.4",
+  "checks": [
+    {
+      "name": "SQLite supports STRICT",
+      "passed": true,
+      "detail": "3.50.4"
+    },
+    {
+      "name": "Stage 2 passed",
+      "passed": true,
+      "detail": "Run src.prepare_data successfully before building the database"
+    },
+    {
+      "name": "Source provenance matches",
+      "passed": true,
+      "detail": "Preserved original files and stage-2 source metadata agree"
+    },
+    {
+      "name": "Clean CSV checksum matches",
+      "passed": true,
+      "detail": "No manual changes to the CSV since stage-2 validation"
+    },
+    {
+      "name": "Clean schema and shape",
+      "passed": true,
+      "detail": "Observed 30,000 customers and 30 columns"
+    },
+    {
+      "name": "Clean customer key",
+      "passed": true,
+      "detail": "Input contains exactly one nonmissing row per customer"
+    },
+    {
+      "name": "Foreign keys enabled",
+      "passed": true,
+      "detail": "Enforcement enabled for this connection"
+    },
+    {
+      "name": "Project database identity",
+      "passed": true,
+      "detail": "Generated project database, schema version 1"
+    },
+    {
+      "name": "Expected tables",
+      "passed": true,
+      "detail": "Exactly customers, monthly_repayments, default_outcomes"
+    },
+    {
+      "name": "Installed schema matches",
+      "passed": true,
+      "detail": "Table definitions, foreign keys, CHECK constraints, and index match sql/schema.sql"
+    },
+    {
+      "name": "Strict tables with explicit keys",
+      "passed": true,
+      "detail": "All three tables use STRICT and WITHOUT ROWID"
+    },
+    {
+      "name": "SQLite integrity",
+      "passed": true,
+      "detail": "SQLite reports no structural or CHECK-constraint errors"
+    },
+    {
+      "name": "No foreign-key violations",
+      "passed": true,
+      "detail": "No repayment or outcome references an absent customer"
+    },
+    {
+      "name": "customers: row count",
+      "passed": true,
+      "detail": "30,000 rows"
+    },
+    {
+      "name": "customers: every value matches",
+      "passed": true,
+      "detail": "All keys, columns, labels, flags, codes, and amounts reconcile to the source"
+    },
+    {
+      "name": "customers: primary key",
+      "passed": true,
+      "detail": "customer_id"
+    },
+    {
+      "name": "monthly_repayments: row count",
+      "passed": true,
+      "detail": "180,000 rows"
+    },
+    {
+      "name": "monthly_repayments: every value matches",
+      "passed": true,
+      "detail": "All keys, columns, labels, flags, codes, and amounts reconcile to the source"
+    },
+    {
+      "name": "monthly_repayments: primary key",
+      "passed": true,
+      "detail": "customer_id, month"
+    },
+    {
+      "name": "default_outcomes: row count",
+      "passed": true,
+      "detail": "30,000 rows"
+    },
+    {
+      "name": "default_outcomes: every value matches",
+      "passed": true,
+      "detail": "All keys, columns, labels, flags, codes, and amounts reconcile to the source"
+    },
+    {
+      "name": "default_outcomes: primary key",
+      "passed": true,
+      "detail": "customer_id"
+    },
+    {
+      "name": "Six months for every customer",
+      "passed": true,
+      "detail": "Customers with incomplete/duplicate history: 0"
+    },
+    {
+      "name": "Outcome for every customer",
+      "passed": true,
+      "detail": "Customers without an outcome: 0"
+    },
+    {
+      "name": "Six expected calendar months",
+      "passed": true,
+      "detail": "April to September 2005, in order"
+    },
+    {
+      "name": "Each month covers all customers",
+      "passed": true,
+      "detail": "Each monthly denominator is 30,000 customers"
+    },
+    {
+      "name": "Join grain: customer_tables",
+      "passed": true,
+      "detail": "Customer-level counts and sums preserved"
+    },
+    {
+      "name": "Join grain: direct_monthly_join",
+      "passed": true,
+      "detail": "Sixfold duplication demonstrated"
+    },
+    {
+      "name": "Join grain: aggregate_before_join",
+      "passed": true,
+      "detail": "Customer-level counts and sums preserved"
+    }
+  ],
+  "input": {
+    "clean_csv_sha256": "3fb5bfd7af4ee43456996c74a8ec5be3a9057daaaa92a00c522081cae5fe43d2",
+    "stage_2_run_at_utc": "2026-11-03T04:36:36.356480+00:00",
+    "source": {
+      "dataset_id": 350,
+      "dataset_title": "Default of Credit Card Clients",
+      "source_page": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+      "download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+      "resolved_download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+      "retrieved_at_utc": "2026-11-02T04:11:04.565456+00:00",
+      "doi": "10.24432/C55S3H",
+      "license": "CC BY 4.0",
+      "files": {
+        "uci_350_original.zip": {
+          "sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+          "size_bytes": 5539494
+        },
+        "default of credit card clients.xls": {
+          "sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+          "size_bytes": 5539328
+        }
+      }
+    }
+  },
+  "schema_sha256": "f494db1a1ae5033a19998ba76cbe0b82a65fea96c19e3824c1d56ded06e6463f",
+  "row_counts": {
+    "customers": 30000,
+    "monthly_repayments": 180000,
+    "default_outcomes": 30000
+  },
+  "monthly_reconciliation": [
+    {
+      "month": "2005-04",
+      "customer_month_rows": 30000,
+      "bill_amount_sum_ntd": 1166152812,
+      "payment_amount_sum_ntd": 156465077,
+      "negative_bill_rows": 688,
+      "undocumented_status_rows": 21181
+    },
+    {
+      "month": "2005-05",
+      "customer_month_rows": 30000,
+      "bill_amount_sum_ntd": 1209342029,
+      "payment_amount_sum_ntd": 143981629,
+      "negative_bill_rows": 655,
+      "undocumented_status_rows": 21493
+    },
+    {
+      "month": "2005-06",
+      "customer_month_rows": 30000,
+      "bill_amount_sum_ntd": 1297888469,
+      "payment_amount_sum_ntd": 144782306,
+      "negative_bill_rows": 675,
+      "undocumented_status_rows": 20803
+    },
+    {
+      "month": "2005-07",
+      "customer_month_rows": 30000,
+      "bill_amount_sum_ntd": 1410394644,
+      "payment_amount_sum_ntd": 156770445,
+      "negative_bill_rows": 655,
+      "undocumented_status_rows": 19849
+    },
+    {
+      "month": "2005-08",
+      "customer_month_rows": 30000,
+      "bill_amount_sum_ntd": 1475372255,
+      "payment_amount_sum_ntd": 177634905,
+      "negative_bill_rows": 669,
+      "undocumented_status_rows": 19512
+    },
+    {
+      "month": "2005-09",
+      "customer_month_rows": 30000,
+      "bill_amount_sum_ntd": 1536699927,
+      "payment_amount_sum_ntd": 169907415,
+      "negative_bill_rows": 590,
+      "undocumented_status_rows": 17496
+    }
+  ],
+  "join_grain_checks": [
+    {
+      "join_pattern": "customer_tables",
+      "row_count": 30000,
+      "unique_customers": 30000,
+      "credit_limit_sum_ntd": 5024529680,
+      "default_count": 6636
+    },
+    {
+      "join_pattern": "direct_monthly_join",
+      "row_count": 180000,
+      "unique_customers": 30000,
+      "credit_limit_sum_ntd": 30147178080,
+      "default_count": 39816
+    },
+    {
+      "join_pattern": "aggregate_before_join",
+      "row_count": 30000,
+      "unique_customers": 30000,
+      "credit_limit_sum_ntd": 5024529680,
+      "default_count": 6636
+    }
+  ],
+  "customer_totals": {
+    "row_count": 30000,
+    "unique_customers": 30000,
+    "credit_limit_sum_ntd": 5024529680,
+    "default_count": 6636
+  },
+  "sample_default_rate": 0.2212,
+  "database": {
+    "path": "database/credit_risk.sqlite",
+    "sha256": "589cb848ccbe71f69d2c0f8ce79875fe9b49340ae5a2e3420dd8a8c4016df1ba",
+    "size_bytes": 9441280
+  }
+}

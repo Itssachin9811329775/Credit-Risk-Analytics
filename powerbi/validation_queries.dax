@@ -1,0 +1,52 @@
+// Run in Power BI Desktop's DAX query view after Refresh.
+// Each result is computed by the actual semantic model, not a Python imitation.
+EVALUATE
+UNION(
+    ROW("Scenario", "Baseline", "Customers", [Customer Count],
+        "Defaults", [Defaulting Customers], "Rate", [Default Rate],
+        "Credit_NTD", [Credit Limit NTD], "Monthly_rows", [Monthly Rows],
+        "Cohort_customers", [Selected History Customers],
+        "Cohort_defaults", [Defaults in Selected History Cohort],
+        "Cohort_rate", [Selected History Cohort Default Rate],
+        "Single_month_bill_NTD", [Single Month Bill NTD]),
+    CALCULATETABLE(
+        ROW("Scenario", "September", "Customers", [Customer Count],
+            "Defaults", [Defaulting Customers], "Rate", [Default Rate],
+            "Credit_NTD", [Credit Limit NTD], "Monthly_rows", [Monthly Rows],
+            "Cohort_customers", [Selected History Customers],
+            "Cohort_defaults", [Defaults in Selected History Cohort],
+            "Cohort_rate", [Selected History Cohort Default Rate],
+            "Single_month_bill_NTD", [Single Month Bill NTD]),
+        calendar_months[month] = "2005-09"),
+    CALCULATETABLE(
+        ROW("Scenario", "September / 2+ months delay", "Customers", [Customer Count],
+            "Defaults", [Defaulting Customers], "Rate", [Default Rate],
+            "Credit_NTD", [Credit Limit NTD], "Monthly_rows", [Monthly Rows],
+            "Cohort_customers", [Selected History Customers],
+            "Cohort_defaults", [Defaults in Selected History Cohort],
+            "Cohort_rate", [Selected History Cohort Default Rate],
+            "Single_month_bill_NTD", [Single Month Bill NTD]),
+        calendar_months[month] = "2005-09",
+        monthly_repayments[repayment_status_group] = "2+ months delay"),
+    CALCULATETABLE(
+        ROW("Scenario", "September / 2+ delay / below 50k", "Customers", [Customer Count],
+            "Defaults", [Defaulting Customers], "Rate", [Default Rate],
+            "Credit_NTD", [Credit Limit NTD], "Monthly_rows", [Monthly Rows],
+            "Cohort_customers", [Selected History Customers],
+            "Cohort_defaults", [Defaults in Selected History Cohort],
+            "Cohort_rate", [Selected History Cohort Default Rate],
+            "Single_month_bill_NTD", [Single Month Bill NTD]),
+        calendar_months[month] = "2005-09",
+        monthly_repayments[repayment_status_group] = "2+ months delay",
+        customers[credit_limit_band] = "Below 50k"),
+    CALCULATETABLE(
+        ROW("Scenario", "Aug-Sep / 2+ months delay", "Customers", [Customer Count],
+            "Defaults", [Defaulting Customers], "Rate", [Default Rate],
+            "Credit_NTD", [Credit Limit NTD], "Monthly_rows", [Monthly Rows],
+            "Cohort_customers", [Selected History Customers],
+            "Cohort_defaults", [Defaults in Selected History Cohort],
+            "Cohort_rate", [Selected History Cohort Default Rate],
+            "Single_month_bill_NTD", [Single Month Bill NTD]),
+        calendar_months[month] IN {"2005-08", "2005-09"},
+        monthly_repayments[repayment_status_group] = "2+ months delay")
+)

@@ -1,0 +1,170 @@
+{
+  "stage": 2,
+  "status": "passed",
+  "run_at_utc": "2026-11-03T04:36:36.356480+00:00",
+  "checks": [
+    {
+      "name": "Expected workbook sheet",
+      "passed": true,
+      "detail": "Expected the inspected Data sheet"
+    },
+    {
+      "name": "Expected schema",
+      "passed": true,
+      "detail": "Exactly the 25 expected source columns in their original order"
+    },
+    {
+      "name": "Expected row count",
+      "passed": true,
+      "detail": "Observed 30,000; expected 30,000"
+    },
+    {
+      "name": "No missing values",
+      "passed": true,
+      "detail": "Missing cells: 0"
+    },
+    {
+      "name": "Numeric source fields",
+      "passed": true,
+      "detail": "Every source field must be numeric"
+    },
+    {
+      "name": "Finite integer values",
+      "passed": true,
+      "detail": "Finite whole numbers safely convertible to int64; no fractions or overflowing values"
+    },
+    {
+      "name": "Unique positive customer IDs",
+      "passed": true,
+      "detail": "Repeated IDs: 0"
+    },
+    {
+      "name": "Binary target",
+      "passed": true,
+      "detail": "Target codes must be 0 or 1"
+    },
+    {
+      "name": "Positive credit limits",
+      "passed": true,
+      "detail": "Credit limits must exceed zero"
+    },
+    {
+      "name": "Plausible age",
+      "passed": true,
+      "detail": "Project investigation guardrail: ages 18-100 inclusive; not a UCI eligibility rule"
+    },
+    {
+      "name": "Recognised sex codes",
+      "passed": true,
+      "detail": "Codes 1 and 2 as documented"
+    },
+    {
+      "name": "Education codes inspected",
+      "passed": true,
+      "detail": "Observed codes 0-6 accepted; 0, 5, 6 will be labelled undocumented"
+    },
+    {
+      "name": "Marriage codes inspected",
+      "passed": true,
+      "detail": "Codes 0-3 accepted; 0 will be labelled undocumented"
+    },
+    {
+      "name": "Repayment codes inspected",
+      "passed": true,
+      "detail": "Documented -1 and 1-9, plus observed undocumented -2 and 0"
+    },
+    {
+      "name": "Nonnegative payment amounts",
+      "passed": true,
+      "detail": "Negative payments require investigation; negative bills are retained"
+    },
+    {
+      "name": "All customers retained",
+      "passed": true,
+      "detail": "No source customer added or removed"
+    },
+    {
+      "name": "Clean key unique and complete",
+      "passed": true,
+      "detail": "Exactly one row per customer"
+    },
+    {
+      "name": "Source values preserved",
+      "passed": true,
+      "detail": "Every original numeric value, including unknown codes and negative bills, matches"
+    },
+    {
+      "name": "No missing cleaned values",
+      "passed": true,
+      "detail": "Labels and flags are populated"
+    },
+    {
+      "name": "CSV round-trip matches",
+      "passed": true,
+      "detail": "Values, dtypes, columns, and rows survive CSV export"
+    }
+  ],
+  "source": {
+    "dataset_id": 350,
+    "dataset_title": "Default of Credit Card Clients",
+    "source_page": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+    "download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+    "resolved_download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+    "retrieved_at_utc": "2026-11-02T04:11:04.565456+00:00",
+    "doi": "10.24432/C55S3H",
+    "license": "CC BY 4.0",
+    "files": {
+      "uci_350_original.zip": {
+        "sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+        "size_bytes": 5539494
+      },
+      "default of credit card clients.xls": {
+        "sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+        "size_bytes": 5539328
+      }
+    }
+  },
+  "sheet_names": [
+    "Data"
+  ],
+  "parsing": {
+    "sheet": "Data",
+    "header_excel_row": 2,
+    "engine": "xlrd"
+  },
+  "raw_shape": [
+    30000,
+    25
+  ],
+  "observations": {
+    "customer_count": 30000,
+    "source_column_count": 25,
+    "missing_cells": 0,
+    "duplicate_ids": 0,
+    "duplicate_full_rows": 0,
+    "repeated_profiles_excluding_id": 35,
+    "repeated_predictor_profiles_excluding_id_and_target": 56,
+    "undocumented_education_customers": 345,
+    "undocumented_marriage_customers": 54,
+    "undocumented_repayment_cells": 120334,
+    "customers_with_undocumented_repayment_codes": 25939,
+    "negative_bill_cells": 3932,
+    "customers_with_negative_bills": 1930,
+    "negative_payment_cells": 0,
+    "default_customers": 6636,
+    "nondefault_customers": 23364,
+    "sample_default_rate": 0.2212,
+    "minimum_age": 21,
+    "maximum_age": 79,
+    "minimum_credit_limit_ntd": 10000,
+    "maximum_credit_limit_ntd": 1000000
+  },
+  "clean_shape": [
+    30000,
+    30
+  ],
+  "clean_file": {
+    "path": "data/processed/credit_clients_clean.csv",
+    "sha256": "3fb5bfd7af4ee43456996c74a8ec5be3a9057daaaa92a00c522081cae5fe43d2"
+  }
+}

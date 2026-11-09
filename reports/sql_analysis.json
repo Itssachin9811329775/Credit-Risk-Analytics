@@ -1,0 +1,714 @@
+{
+  "stage": 4,
+  "status": "passed",
+  "run_at_utc": "2026-11-03T04:36:48.751376+00:00",
+  "checks": [
+    {
+      "analysis": "01_portfolio_overview",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "02_latest_repayment_status",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "03_credit_limit_bands",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "04_delayed_month_count",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "05_monthly_status_mix",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "06_aug_sep_transitions",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "07_september_bill_to_limit",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "08_zero_payment_months",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "09_history_priority_deciles",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    },
+    {
+      "analysis": "10_age_bands",
+      "passed": true,
+      "detail": "Every SQL count, total, rate, and grouping matches independent Pandas calculations"
+    }
+  ],
+  "provenance": {
+    "database_sha256": "589cb848ccbe71f69d2c0f8ce79875fe9b49340ae5a2e3420dd8a8c4016df1ba",
+    "clean_csv_sha256": "3fb5bfd7af4ee43456996c74a8ec5be3a9057daaaa92a00c522081cae5fe43d2",
+    "source": {
+      "dataset_id": 350,
+      "dataset_title": "Default of Credit Card Clients",
+      "source_page": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+      "download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+      "resolved_download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+      "retrieved_at_utc": "2026-11-02T04:11:04.565456+00:00",
+      "doi": "10.24432/C55S3H",
+      "license": "CC BY 4.0",
+      "files": {
+        "uci_350_original.zip": {
+          "sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+          "size_bytes": 5539494
+        },
+        "default of credit card clients.xls": {
+          "sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+          "size_bytes": 5539328
+        }
+      }
+    },
+    "validation_checks_passed": 28,
+    "customer_count": 30000,
+    "history_start": "2005-04",
+    "history_end": "2005-09"
+  },
+  "results": {
+    "01_portfolio_overview": {
+      "columns": [
+        "customers",
+        "default_customers",
+        "nondefault_customers",
+        "default_rate",
+        "total_credit_limit_ntd",
+        "mean_credit_limit_ntd"
+      ],
+      "row_count": 1,
+      "records": [
+        {
+          "customers": 30000,
+          "default_customers": 6636,
+          "nondefault_customers": 23364,
+          "default_rate": 0.2212,
+          "total_credit_limit_ntd": 5024529680,
+          "mean_credit_limit_ntd": 167484.32266666667
+        }
+      ],
+      "csv_path": "reports/sql_results/01_portfolio_overview.csv",
+      "sql_sha256": "370764588cf0b7172ed3bc9ff4707ec26fd4cc476bbf6670f2e0ad08d73449a4",
+      "csv_sha256": "dc6fefe7a68f6aa328a78dc33b609a2dafb7eac1935dd4db93de851649a04cc8"
+    },
+    "02_latest_repayment_status": {
+      "columns": [
+        "status_group",
+        "customers",
+        "default_customers",
+        "default_rate"
+      ],
+      "row_count": 5,
+      "records": [
+        {
+          "status_group": "Undocumented -2",
+          "customers": 2759,
+          "default_customers": 365,
+          "default_rate": 0.132294309532439
+        },
+        {
+          "status_group": "Paid duly (-1)",
+          "customers": 5686,
+          "default_customers": 954,
+          "default_rate": 0.167780513542033
+        },
+        {
+          "status_group": "Undocumented 0",
+          "customers": 14737,
+          "default_customers": 1888,
+          "default_rate": 0.128112913075931
+        },
+        {
+          "status_group": "1 month delay",
+          "customers": 3688,
+          "default_customers": 1252,
+          "default_rate": 0.339479392624729
+        },
+        {
+          "status_group": "2+ months delay",
+          "customers": 3130,
+          "default_customers": 2177,
+          "default_rate": 0.695527156549521
+        }
+      ],
+      "csv_path": "reports/sql_results/02_latest_repayment_status.csv",
+      "sql_sha256": "f69ceda3cf41a391c82efbb2b43fe0a0028fda38a278483dccbddf96041cf53f",
+      "csv_sha256": "939e24437878eaf95ae938689edc3f0de51ae4c43435a9eb31440b6b27c46aa8"
+    },
+    "03_credit_limit_bands": {
+      "columns": [
+        "credit_limit_band",
+        "customers",
+        "default_customers",
+        "default_rate"
+      ],
+      "row_count": 4,
+      "records": [
+        {
+          "credit_limit_band": "Below 50k",
+          "customers": 4311,
+          "default_customers": 1555,
+          "default_rate": 0.360705172813732
+        },
+        {
+          "credit_limit_band": "50k-<100k",
+          "customers": 7139,
+          "default_customers": 1857,
+          "default_rate": 0.260120465051128
+        },
+        {
+          "credit_limit_band": "100k-<200k",
+          "customers": 7400,
+          "default_customers": 1537,
+          "default_rate": 0.207702702702703
+        },
+        {
+          "credit_limit_band": "200k+",
+          "customers": 11150,
+          "default_customers": 1687,
+          "default_rate": 0.151300448430493
+        }
+      ],
+      "csv_path": "reports/sql_results/03_credit_limit_bands.csv",
+      "sql_sha256": "538cd244f023bd180e8f7a88ac3740c11a777c3546148e02e64b4d93a69358ee",
+      "csv_sha256": "528c37016e3d76e7394c939161eeb83437fb24f9191d5bb9fb2a4fa1f65bfd96"
+    },
+    "04_delayed_month_count": {
+      "columns": [
+        "delayed_months",
+        "customers",
+        "default_customers",
+        "default_rate",
+        "mean_undocumented_months"
+      ],
+      "row_count": 7,
+      "records": [
+        {
+          "delayed_months": 0,
+          "customers": 19931,
+          "default_customers": 2334,
+          "default_rate": 0.117104008830465,
+          "mean_undocumented_months": 4.655260649239877
+        },
+        {
+          "delayed_months": 1,
+          "customers": 4426,
+          "default_customers": 1320,
+          "default_rate": 0.298237686398554,
+          "mean_undocumented_months": 3.675779484862178
+        },
+        {
+          "delayed_months": 2,
+          "customers": 1899,
+          "default_customers": 736,
+          "default_rate": 0.387572406529752,
+          "mean_undocumented_months": 3.273301737756714
+        },
+        {
+          "delayed_months": 3,
+          "customers": 1154,
+          "default_customers": 587,
+          "default_rate": 0.508665511265165,
+          "mean_undocumented_months": 2.633448873483536
+        },
+        {
+          "delayed_months": 4,
+          "customers": 951,
+          "default_customers": 545,
+          "default_rate": 0.573080967402734,
+          "mean_undocumented_months": 1.870662460567823
+        },
+        {
+          "delayed_months": 5,
+          "customers": 298,
+          "default_customers": 171,
+          "default_rate": 0.573825503355705,
+          "mean_undocumented_months": 0.828859060402684
+        },
+        {
+          "delayed_months": 6,
+          "customers": 1341,
+          "default_customers": 943,
+          "default_rate": 0.703206562266965,
+          "mean_undocumented_months": 0.0
+        }
+      ],
+      "csv_path": "reports/sql_results/04_delayed_month_count.csv",
+      "sql_sha256": "32bb299a18a2a5a158ff811218c34314a94f9794bed9b45e52cc890b3a3a6eb3",
+      "csv_sha256": "c26e0170ab35b384558ec3ab49d08345482891894170018de6598926f3b782c5"
+    },
+    "05_monthly_status_mix": {
+      "columns": [
+        "month",
+        "customers",
+        "paid_duly_customers",
+        "documented_delay_customers",
+        "two_plus_delay_customers",
+        "undocumented_customers",
+        "documented_delay_share",
+        "undocumented_share"
+      ],
+      "row_count": 6,
+      "records": [
+        {
+          "month": "2005-04",
+          "customers": 30000,
+          "paid_duly_customers": 5740,
+          "documented_delay_customers": 3079,
+          "two_plus_delay_customers": 3079,
+          "undocumented_customers": 21181,
+          "documented_delay_share": 0.102633333333333,
+          "undocumented_share": 0.706033333333333
+        },
+        {
+          "month": "2005-05",
+          "customers": 30000,
+          "paid_duly_customers": 5539,
+          "documented_delay_customers": 2968,
+          "two_plus_delay_customers": 2968,
+          "undocumented_customers": 21493,
+          "documented_delay_share": 0.098933333333333,
+          "undocumented_share": 0.716433333333333
+        },
+        {
+          "month": "2005-06",
+          "customers": 30000,
+          "paid_duly_customers": 5687,
+          "documented_delay_customers": 3510,
+          "two_plus_delay_customers": 3508,
+          "undocumented_customers": 20803,
+          "documented_delay_share": 0.117,
+          "undocumented_share": 0.693433333333333
+        },
+        {
+          "month": "2005-07",
+          "customers": 30000,
+          "paid_duly_customers": 5938,
+          "documented_delay_customers": 4213,
+          "two_plus_delay_customers": 4209,
+          "undocumented_customers": 19849,
+          "documented_delay_share": 0.140433333333333,
+          "undocumented_share": 0.661633333333333
+        },
+        {
+          "month": "2005-08",
+          "customers": 30000,
+          "paid_duly_customers": 6050,
+          "documented_delay_customers": 4438,
+          "two_plus_delay_customers": 4410,
+          "undocumented_customers": 19512,
+          "documented_delay_share": 0.147933333333333,
+          "undocumented_share": 0.6504
+        },
+        {
+          "month": "2005-09",
+          "customers": 30000,
+          "paid_duly_customers": 5686,
+          "documented_delay_customers": 6818,
+          "two_plus_delay_customers": 3130,
+          "undocumented_customers": 17496,
+          "documented_delay_share": 0.227266666666667,
+          "undocumented_share": 0.5832
+        }
+      ],
+      "csv_path": "reports/sql_results/05_monthly_status_mix.csv",
+      "sql_sha256": "5747771c77d2a9519ebe049c9733bbcac8d6a2d28247a26a24f7d1983b218a02",
+      "csv_sha256": "3695136072cf50f1643d80c1b0e0ba65c456fda5aadcac5459f7a757a02f352e"
+    },
+    "06_aug_sep_transitions": {
+      "columns": [
+        "august_status_group",
+        "september_status_group",
+        "customers",
+        "default_customers",
+        "default_rate"
+      ],
+      "row_count": 16,
+      "records": [
+        {
+          "august_status_group": "1 month delay",
+          "september_status_group": "1 month delay",
+          "customers": 28,
+          "default_customers": 5,
+          "default_rate": 0.178571428571429
+        },
+        {
+          "august_status_group": "2+ months delay",
+          "september_status_group": "1 month delay",
+          "customers": 1824,
+          "default_customers": 775,
+          "default_rate": 0.424890350877193
+        },
+        {
+          "august_status_group": "2+ months delay",
+          "september_status_group": "2+ months delay",
+          "customers": 2139,
+          "default_customers": 1526,
+          "default_rate": 0.713417484805984
+        },
+        {
+          "august_status_group": "2+ months delay",
+          "september_status_group": "Paid duly (-1)",
+          "customers": 442,
+          "default_customers": 167,
+          "default_rate": 0.377828054298642
+        },
+        {
+          "august_status_group": "2+ months delay",
+          "september_status_group": "Undocumented -2",
+          "customers": 5,
+          "default_customers": 3,
+          "default_rate": 0.6
+        },
+        {
+          "august_status_group": "Paid duly (-1)",
+          "september_status_group": "1 month delay",
+          "customers": 612,
+          "default_customers": 126,
+          "default_rate": 0.205882352941176
+        },
+        {
+          "august_status_group": "Paid duly (-1)",
+          "september_status_group": "2+ months delay",
+          "customers": 126,
+          "default_customers": 56,
+          "default_rate": 0.444444444444444
+        },
+        {
+          "august_status_group": "Paid duly (-1)",
+          "september_status_group": "Paid duly (-1)",
+          "customers": 4641,
+          "default_customers": 705,
+          "default_rate": 0.151906916612799
+        },
+        {
+          "august_status_group": "Paid duly (-1)",
+          "september_status_group": "Undocumented -2",
+          "customers": 193,
+          "default_customers": 17,
+          "default_rate": 0.088082901554404
+        },
+        {
+          "august_status_group": "Paid duly (-1)",
+          "september_status_group": "Undocumented 0",
+          "customers": 478,
+          "default_customers": 62,
+          "default_rate": 0.129707112970711
+        },
+        {
+          "august_status_group": "Undocumented -2",
+          "september_status_group": "1 month delay",
+          "customers": 1221,
+          "default_customers": 346,
+          "default_rate": 0.283374283374283
+        },
+        {
+          "august_status_group": "Undocumented -2",
+          "september_status_group": "Undocumented -2",
+          "customers": 2561,
+          "default_customers": 345,
+          "default_rate": 0.134713002733307
+        },
+        {
+          "august_status_group": "Undocumented 0",
+          "september_status_group": "1 month delay",
+          "customers": 3,
+          "default_customers": 0,
+          "default_rate": 0.0
+        },
+        {
+          "august_status_group": "Undocumented 0",
+          "september_status_group": "2+ months delay",
+          "customers": 865,
+          "default_customers": 595,
+          "default_rate": 0.687861271676301
+        },
+        {
+          "august_status_group": "Undocumented 0",
+          "september_status_group": "Paid duly (-1)",
+          "customers": 603,
+          "default_customers": 82,
+          "default_rate": 0.135986733001658
+        },
+        {
+          "august_status_group": "Undocumented 0",
+          "september_status_group": "Undocumented 0",
+          "customers": 14259,
+          "default_customers": 1826,
+          "default_rate": 0.128059471211165
+        }
+      ],
+      "csv_path": "reports/sql_results/06_aug_sep_transitions.csv",
+      "sql_sha256": "320a1fccfa24e49b025bc9965597b92f38fd1ae1f25fa34a4414583077bd0c76",
+      "csv_sha256": "db16ffa266a823bf2e1da1d90806d3c633f1ba7960d076d2c8e3f443894b1442"
+    },
+    "07_september_bill_to_limit": {
+      "columns": [
+        "bill_to_limit_band",
+        "customers",
+        "default_customers",
+        "default_rate"
+      ],
+      "row_count": 6,
+      "records": [
+        {
+          "bill_to_limit_band": "Negative bill",
+          "customers": 590,
+          "default_customers": 109,
+          "default_rate": 0.184745762711864
+        },
+        {
+          "bill_to_limit_band": "0-<25%",
+          "customers": 13447,
+          "default_customers": 2457,
+          "default_rate": 0.182717334721499
+        },
+        {
+          "bill_to_limit_band": "25-<50%",
+          "customers": 3589,
+          "default_customers": 780,
+          "default_rate": 0.21733073279465
+        },
+        {
+          "bill_to_limit_band": "50-<75%",
+          "customers": 3579,
+          "default_customers": 929,
+          "default_rate": 0.259569712210115
+        },
+        {
+          "bill_to_limit_band": "75-<100%",
+          "customers": 6672,
+          "default_customers": 1723,
+          "default_rate": 0.258243405275779
+        },
+        {
+          "bill_to_limit_band": "100%+",
+          "customers": 2123,
+          "default_customers": 638,
+          "default_rate": 0.300518134715026
+        }
+      ],
+      "csv_path": "reports/sql_results/07_september_bill_to_limit.csv",
+      "sql_sha256": "10aabd4dd6591b9ce3e5dd2f6da63278049e3da816f464448ad3be5ace78299f",
+      "csv_sha256": "e624e8244c375bb9a53510ed8e6fc61c950582f25854b29fa786156fe9a58532"
+    },
+    "08_zero_payment_months": {
+      "columns": [
+        "zero_payment_months",
+        "customers",
+        "default_customers",
+        "default_rate"
+      ],
+      "row_count": 7,
+      "records": [
+        {
+          "zero_payment_months": 0,
+          "customers": 15458,
+          "default_customers": 2151,
+          "default_rate": 0.139151248544443
+        },
+        {
+          "zero_payment_months": 1,
+          "customers": 5473,
+          "default_customers": 1586,
+          "default_rate": 0.28978622327791
+        },
+        {
+          "zero_payment_months": 2,
+          "customers": 3387,
+          "default_customers": 1141,
+          "default_rate": 0.336876291703572
+        },
+        {
+          "zero_payment_months": 3,
+          "customers": 1944,
+          "default_customers": 608,
+          "default_rate": 0.312757201646091
+        },
+        {
+          "zero_payment_months": 4,
+          "customers": 1304,
+          "default_customers": 328,
+          "default_rate": 0.251533742331288
+        },
+        {
+          "zero_payment_months": 5,
+          "customers": 1002,
+          "default_customers": 278,
+          "default_rate": 0.277445109780439
+        },
+        {
+          "zero_payment_months": 6,
+          "customers": 1432,
+          "default_customers": 544,
+          "default_rate": 0.379888268156425
+        }
+      ],
+      "csv_path": "reports/sql_results/08_zero_payment_months.csv",
+      "sql_sha256": "75338cc7a4321909907f6f489e944b5ef60156369d8cb04159c9b8f6de1a6a4a",
+      "csv_sha256": "b49d4120f299b0663bbcb148269c0873f51fed9535ea0dfbf305c83416d7338b"
+    },
+    "09_history_priority_deciles": {
+      "columns": [
+        "priority_decile",
+        "customers",
+        "default_customers",
+        "default_rate",
+        "default_capture_share",
+        "cumulative_default_capture_share",
+        "mean_delayed_months"
+      ],
+      "row_count": 10,
+      "records": [
+        {
+          "priority_decile": 1,
+          "customers": 3000,
+          "default_customers": 2098,
+          "default_rate": 0.699333333333333,
+          "default_capture_share": 0.316154309825196,
+          "cumulative_default_capture_share": 0.316154309825196,
+          "mean_delayed_months": 3.649
+        },
+        {
+          "priority_decile": 2,
+          "customers": 3000,
+          "default_customers": 1162,
+          "default_rate": 0.387333333333333,
+          "default_capture_share": 0.175105485232068,
+          "cumulative_default_capture_share": 0.491259795057263,
+          "mean_delayed_months": 2.681333333333333
+        },
+        {
+          "priority_decile": 3,
+          "customers": 3000,
+          "default_customers": 808,
+          "default_rate": 0.269333333333333,
+          "default_capture_share": 0.121760096443641,
+          "cumulative_default_capture_share": 0.613019891500904,
+          "mean_delayed_months": 1.655333333333333
+        },
+        {
+          "priority_decile": 4,
+          "customers": 3000,
+          "default_customers": 480,
+          "default_rate": 0.16,
+          "default_capture_share": 0.072332730560579,
+          "cumulative_default_capture_share": 0.685352622061483,
+          "mean_delayed_months": 0.356333333333333
+        },
+        {
+          "priority_decile": 5,
+          "customers": 3000,
+          "default_customers": 365,
+          "default_rate": 0.121666666666667,
+          "default_capture_share": 0.055003013863773,
+          "cumulative_default_capture_share": 0.740355635925256,
+          "mean_delayed_months": 0.0
+        },
+        {
+          "priority_decile": 6,
+          "customers": 3000,
+          "default_customers": 377,
+          "default_rate": 0.125666666666667,
+          "default_capture_share": 0.056811332127788,
+          "cumulative_default_capture_share": 0.797166968053044,
+          "mean_delayed_months": 0.0
+        },
+        {
+          "priority_decile": 7,
+          "customers": 3000,
+          "default_customers": 362,
+          "default_rate": 0.120666666666667,
+          "default_capture_share": 0.05455093429777,
+          "cumulative_default_capture_share": 0.851717902350814,
+          "mean_delayed_months": 0.0
+        },
+        {
+          "priority_decile": 8,
+          "customers": 3000,
+          "default_customers": 325,
+          "default_rate": 0.108333333333333,
+          "default_capture_share": 0.048975286317058,
+          "cumulative_default_capture_share": 0.900693188667872,
+          "mean_delayed_months": 0.0
+        },
+        {
+          "priority_decile": 9,
+          "customers": 3000,
+          "default_customers": 317,
+          "default_rate": 0.105666666666667,
+          "default_capture_share": 0.047769740807715,
+          "cumulative_default_capture_share": 0.948462929475588,
+          "mean_delayed_months": 0.0
+        },
+        {
+          "priority_decile": 10,
+          "customers": 3000,
+          "default_customers": 342,
+          "default_rate": 0.114,
+          "default_capture_share": 0.051537070524412,
+          "cumulative_default_capture_share": 1.0,
+          "mean_delayed_months": 0.0
+        }
+      ],
+      "csv_path": "reports/sql_results/09_history_priority_deciles.csv",
+      "sql_sha256": "69252cbb703c3f345b3877e0522d09ec7accd4008024a8c4434a73d4856fbc3f",
+      "csv_sha256": "25575f1fb86bb5a33ccbf1740353376e94ee0303206ae7706644e422a447c37a"
+    },
+    "10_age_bands": {
+      "columns": [
+        "age_band",
+        "customers",
+        "default_customers",
+        "default_rate"
+      ],
+      "row_count": 4,
+      "records": [
+        {
+          "age_band": "Under 30",
+          "customers": 9618,
+          "default_customers": 2197,
+          "default_rate": 0.228425868163859
+        },
+        {
+          "age_band": "30-39",
+          "customers": 11238,
+          "default_customers": 2276,
+          "default_rate": 0.202527140060509
+        },
+        {
+          "age_band": "40-49",
+          "customers": 6464,
+          "default_customers": 1485,
+          "default_rate": 0.229733910891089
+        },
+        {
+          "age_band": "50+",
+          "customers": 2680,
+          "default_customers": 678,
+          "default_rate": 0.252985074626866
+        }
+      ],
+      "csv_path": "reports/sql_results/10_age_bands.csv",
+      "sql_sha256": "a79a14de9ca79f6677bacd873aaeff58fb92669670e13b1b88d5ba3b3f361d4b",
+      "csv_sha256": "1f2fe8e442944d44934ac2f172e4a8605686e6ae4a125572b4d53674ddcb8793"
+    }
+  },
+  "query_count": 10
+}

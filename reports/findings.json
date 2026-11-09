@@ -1,0 +1,93 @@
+{
+  "stage": 7,
+  "status": "passed",
+  "run_at_utc": "2026-11-03T04:37:19.995940+00:00",
+  "provenance": {
+    "database_sha256": "589cb848ccbe71f69d2c0f8ce79875fe9b49340ae5a2e3420dd8a8c4016df1ba",
+    "clean_csv_sha256": "3fb5bfd7af4ee43456996c74a8ec5be3a9057daaaa92a00c522081cae5fe43d2",
+    "source": {
+      "dataset_id": 350,
+      "dataset_title": "Default of Credit Card Clients",
+      "source_page": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+      "download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+      "resolved_download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+      "retrieved_at_utc": "2026-11-02T04:11:04.565456+00:00",
+      "doi": "10.24432/C55S3H",
+      "license": "CC BY 4.0",
+      "files": {
+        "uci_350_original.zip": {
+          "sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+          "size_bytes": 5539494
+        },
+        "default of credit card clients.xls": {
+          "sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+          "size_bytes": 5539328
+        }
+      }
+    },
+    "validation_checks_passed": 28,
+    "customer_count": 30000,
+    "history_start": "2005-04",
+    "history_end": "2005-09"
+  },
+  "cohorts": {
+    "latest_two_plus_delay": {
+      "customers": 3130,
+      "defaults": 2177,
+      "default_rate": 0.6955271565495208,
+      "customer_share": 0.10433333333333333,
+      "default_capture_share": 0.3280590717299578
+    },
+    "latest_paid_duly": {
+      "customers": 5686,
+      "defaults": 954,
+      "default_rate": 0.16778051354203308,
+      "customer_share": 0.18953333333333333,
+      "default_capture_share": 0.1437613019891501
+    },
+    "three_plus_delay_months": {
+      "customers": 3744,
+      "defaults": 2246,
+      "default_rate": 0.5998931623931624,
+      "customer_share": 0.1248,
+      "default_capture_share": 0.338456901748041
+    },
+    "no_recorded_positive_delay": {
+      "customers": 19931,
+      "defaults": 2334,
+      "default_rate": 0.11710400883046511,
+      "customer_share": 0.6643666666666667,
+      "default_capture_share": 0.35171790235081374
+    },
+    "zero_payment_all_six_months": {
+      "customers": 1432,
+      "defaults": 544,
+      "default_rate": 0.37988826815642457,
+      "customer_share": 0.047733333333333336,
+      "default_capture_share": 0.08197709463532249
+    },
+    "credit_limit_below_50k": {
+      "customers": 4311,
+      "defaults": 1555,
+      "default_rate": 0.3607051728137323,
+      "customer_share": 0.1437,
+      "default_capture_share": 0.23432790837854128
+    },
+    "credit_limit_200k_plus": {
+      "customers": 11150,
+      "defaults": 1687,
+      "default_rate": 0.15130044843049328,
+      "customer_share": 0.37166666666666665,
+      "default_capture_share": 0.2542194092827004
+    }
+  },
+  "portfolio": {
+    "customers": 30000,
+    "defaults": 6636,
+    "default_rate": 0.2212
+  },
+  "monthly_comparability": {
+    "august_code_1": 28,
+    "september_code_1": 3688
+  }
+}

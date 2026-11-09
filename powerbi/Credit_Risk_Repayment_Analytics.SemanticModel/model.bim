@@ -1,0 +1,991 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"customers\", \"monthly_repayments\", \"default_outcomes\", \"calendar_months\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "customers.credit_limit_band": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "credit_limit_band"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Credit band": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.credit_limit_in_selected_history_cohort_ntd": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Credit Limit in Selected History Cohort NTD"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Cohort credit limits (NTD)": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.credit_limit_ntd": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Credit Limit NTD"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Credit limits (NTD)": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.customer_count": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Customer Count"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Customers": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.default_rate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Default Rate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Observed default rate": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Base customer-segment rate": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.defaulting_customers": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Defaulting Customers"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Next-month defaults": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.defaults_in_selected_history_cohort": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Defaults in Selected History Cohort"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Defaults": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Selected defaults": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.monthly_customers": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Monthly Customers"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Distinct customers": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.monthly_rows": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Monthly Rows"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Customer-month rows": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.recorded_payments_ntd": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Recorded Payments NTD"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Recorded payments (NTD)": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.selected_history_cohort_default_rate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Selected History Cohort Default Rate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Default rate": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Cohort default rate": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.selected_history_customers": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Selected History Customers"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Customers": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Selected customers": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.single_month_bill_ntd": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Single Month Bill NTD"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Bills: select exactly one month": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "customers.undocumented_status_share": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "customers",
+                    "ConceptualProperty": "Undocumented Status Share"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Undocumented status share": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "expression": "\"C:\\Users\\Sachin\\OneDrive\\Documents\\Desktop\\DS_Project\\data\\exports\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "78b353f2-24c6-40e9-854d-9025e83a6601"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "monthly_repayments_customers",
+        "fromColumn": "customer_id",
+        "fromTable": "monthly_repayments",
+        "toColumn": "customer_id",
+        "toTable": "customers"
+      },
+      {
+        "name": "default_outcomes_customers",
+        "fromColumn": "customer_id",
+        "fromTable": "default_outcomes",
+        "toColumn": "customer_id",
+        "toTable": "customers"
+      },
+      {
+        "name": "monthly_repayments_calendar_months",
+        "fromColumn": "month_start",
+        "fromTable": "monthly_repayments",
+        "toColumn": "month_start",
+        "toTable": "calendar_months"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "customers",
+        "columns": [
+          {
+            "name": "customer_id",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "f064f9be-9a2c-4d2d-a039-fe08d116aea7",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "credit_limit_ntd",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "f5222f1c-dfcd-463a-9969-9885355dfdc7",
+            "sourceColumn": "credit_limit_ntd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sex_code",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "c976b469-b936-409c-b89b-02e2c0aac203",
+            "sourceColumn": "sex_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_code",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "92e7ee9a-c7bf-4cd8-8cb4-8c818e3d6303",
+            "sourceColumn": "education_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "marriage_code",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "5a0fe049-b700-428c-9bfb-8d85ff51683e",
+            "sourceColumn": "marriage_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "age",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "870d97b3-04a5-44b9-9528-45ebf0b49b17",
+            "sourceColumn": "age",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sex_label",
+            "dataType": "string",
+            "lineageTag": "3abe5a8d-0f01-4e4a-ad82-1ad9b9d61728",
+            "sourceColumn": "sex_label",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "education_label",
+            "dataType": "string",
+            "lineageTag": "ec19aa33-2b8a-4bc6-beee-10e403ed0122",
+            "sourceColumn": "education_label",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "marriage_label",
+            "dataType": "string",
+            "lineageTag": "e0577bdc-e215-4b11-8e10-930c214acb46",
+            "sourceColumn": "marriage_label",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "has_negative_bill",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "43db170f-fa1f-4ddd-a893-944219722ae7",
+            "sourceColumn": "has_negative_bill",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "has_undocumented_repayment_code",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "f4d71990-2bd0-4875-a28b-cdd66961abb8",
+            "sourceColumn": "has_undocumented_repayment_code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "history_months",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "0c6cb09f-77e6-4ad9-b399-d4e9e11f4c76",
+            "sourceColumn": "history_months",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delayed_months",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "a5d87b78-4adb-4424-b33c-fc6b1454548a",
+            "sourceColumn": "delayed_months",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "severe_delay_months",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "bde6b1b1-9a72-4684-bab8-af3110731f2c",
+            "sourceColumn": "severe_delay_months",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "unknown_status_months",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "dc6551f9-d831-4cf0-90e8-395788e96e6e",
+            "sourceColumn": "unknown_status_months",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "paid_duly_months",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "617488a3-6e1b-409c-b9ff-235e8bf92836",
+            "sourceColumn": "paid_duly_months",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "zero_payment_months",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "28e098a4-7738-497c-a23b-9b3a038b7bf2",
+            "sourceColumn": "zero_payment_months",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_payment_ntd",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "8f5d0a3c-05dc-43d7-abd6-c60e98ec2fa5",
+            "sourceColumn": "total_payment_ntd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latest_repayment_status",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "a2831b01-4ee6-415b-8a8a-d5e3a76e168f",
+            "sourceColumn": "latest_repayment_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latest_bill_amount_ntd",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "3bf39ca6-a3e9-4ebd-bff0-f53aedc1d13c",
+            "sourceColumn": "latest_bill_amount_ntd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latest_payment_amount_ntd",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "c482306d-18e2-4435-83fe-abb230eed76d",
+            "sourceColumn": "latest_payment_amount_ntd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latest_status_group",
+            "dataType": "string",
+            "lineageTag": "97081481-0be0-40d6-93ef-346243f462aa",
+            "sortByColumn": "latest_status_group_order",
+            "sourceColumn": "latest_status_group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latest_bill_to_limit",
+            "dataType": "double",
+            "lineageTag": "998e07b5-71df-403f-b64f-a87eebdbe31e",
+            "sourceColumn": "latest_bill_to_limit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "credit_limit_band",
+            "dataType": "string",
+            "lineageTag": "f033a0c9-f146-4fc0-9a64-3070ff94922e",
+            "sortByColumn": "credit_limit_band_order",
+            "sourceColumn": "credit_limit_band",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "age_band",
+            "dataType": "string",
+            "lineageTag": "4585bead-7892-44f4-9cc1-9988da40186b",
+            "sortByColumn": "age_band_order",
+            "sourceColumn": "age_band",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "credit_limit_band_order",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "d7e566ac-d8d5-4e27-8a3b-eb278fdb093f",
+            "sourceColumn": "credit_limit_band_order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "age_band_order",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "8e0e6e11-5347-40bf-9d0d-a351e67cd5d4",
+            "sourceColumn": "age_band_order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "latest_status_group_order",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "8511a759-cec7-47a1-abbe-1a6354c47ae8",
+            "sourceColumn": "latest_status_group_order",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "84325fe0-3347-4a85-859f-9676794a6f69",
+        "measures": [
+          {
+            "name": "Customer Count",
+            "displayFolder": "Report measures",
+            "expression": "COUNTROWS(customers)",
+            "formatString": "#,0",
+            "lineageTag": "e84a4830-90f4-4327-8256-432d8a806566"
+          },
+          {
+            "name": "Outcome Customers",
+            "displayFolder": "Report measures",
+            "expression": "COUNTROWS(default_outcomes)",
+            "formatString": "#,0",
+            "lineageTag": "7d6f1eb7-c183-4824-af2f-6381bd929781"
+          },
+          {
+            "name": "Defaulting Customers",
+            "displayFolder": "Report measures",
+            "expression": [
+              "CALCULATE(",
+              "    COUNTROWS(default_outcomes),",
+              "    KEEPFILTERS(default_outcomes[default_next_month] = 1)",
+              ")"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "f02eb5c0-cde2-47ea-96b5-c898921ecbdb"
+          },
+          {
+            "name": "Default Rate",
+            "displayFolder": "Report measures",
+            "expression": "DIVIDE([Defaulting Customers], [Outcome Customers])",
+            "formatString": "0.00%",
+            "lineageTag": "e202bf1c-34b7-4f02-afa4-719fa1192d04"
+          },
+          {
+            "name": "Credit Limit NTD",
+            "displayFolder": "Report measures",
+            "expression": "SUM(customers[credit_limit_ntd])",
+            "formatString": "#,0",
+            "lineageTag": "45340eec-1534-4715-a2bd-1dbc70a7f76a"
+          },
+          {
+            "name": "Monthly Rows",
+            "displayFolder": "Report measures",
+            "expression": "COUNTROWS(monthly_repayments)",
+            "formatString": "#,0",
+            "lineageTag": "0431d069-a871-48ac-bc6c-dd89f0aaaa4e"
+          },
+          {
+            "name": "Monthly Customers",
+            "displayFolder": "Report measures",
+            "expression": "DISTINCTCOUNT(monthly_repayments[customer_id])",
+            "formatString": "#,0",
+            "lineageTag": "7fa1b24a-3ee6-4943-acdb-1eea9b9ed739"
+          },
+          {
+            "name": "Documented Delay Rows",
+            "displayFolder": "Report measures",
+            "expression": [
+              "CALCULATE(",
+              "    [Monthly Rows],",
+              "    KEEPFILTERS(monthly_repayments[repayment_status] >= 1)",
+              ")"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "5fc9f2c3-23de-4db5-aec8-c35bf3683a1c"
+          },
+          {
+            "name": "Documented Delay Share",
+            "displayFolder": "Report measures",
+            "expression": "DIVIDE([Documented Delay Rows], [Monthly Rows])",
+            "formatString": "0.00%",
+            "lineageTag": "265aa184-f245-4cee-8fdd-318ce3de4cd3"
+          },
+          {
+            "name": "Undocumented Status Rows",
+            "displayFolder": "Report measures",
+            "expression": [
+              "CALCULATE(",
+              "    [Monthly Rows],",
+              "    KEEPFILTERS(monthly_repayments[repayment_status] IN {-2, 0})",
+              ")"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "af8aacb5-824f-43da-b66f-66533faec524"
+          },
+          {
+            "name": "Undocumented Status Share",
+            "displayFolder": "Report measures",
+            "expression": "DIVIDE([Undocumented Status Rows], [Monthly Rows])",
+            "formatString": "0.00%",
+            "lineageTag": "1a3658ff-2554-44b6-afce-ca103aef8a68"
+          },
+          {
+            "name": "Recorded Payments NTD",
+            "displayFolder": "Report measures",
+            "expression": "SUM(monthly_repayments[payment_amount_ntd])",
+            "formatString": "#,0",
+            "lineageTag": "bd862d12-a9b9-4a89-a2c5-4e30df2ed3f9"
+          },
+          {
+            "name": "Single Month Bill NTD",
+            "displayFolder": "Report measures",
+            "expression": [
+              "IF(",
+              "    HASONEVALUE(calendar_months[month_start]),",
+              "    SUM(monthly_repayments[bill_amount_ntd]),",
+              "    BLANK()",
+              ")"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "0f24fe11-8411-4ba6-a5ca-469a02a43618"
+          },
+          {
+            "name": "Negative Bill Rows",
+            "displayFolder": "Report measures",
+            "expression": [
+              "CALCULATE(",
+              "    [Monthly Rows],",
+              "    KEEPFILTERS(monthly_repayments[bill_amount_ntd] < 0)",
+              ")"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "5071c6a3-5121-407b-937f-e3ba2d3e63ea"
+          },
+          {
+            "name": "Selected History Customers",
+            "displayFolder": "Report measures",
+            "expression": "COUNTROWS(VALUES(monthly_repayments[customer_id]))",
+            "formatString": "#,0",
+            "lineageTag": "beb5f7b9-13b7-4209-b9cc-e5eb3aeed726"
+          },
+          {
+            "name": "Defaults in Selected History Cohort",
+            "displayFolder": "Report measures",
+            "expression": [
+              "VAR CohortIDs = VALUES(monthly_repayments[customer_id])",
+              "RETURN",
+              "    CALCULATE(",
+              "        [Defaulting Customers],",
+              "        KEEPFILTERS(TREATAS(CohortIDs, default_outcomes[customer_id]))",
+              "    )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "6ca0773c-1195-46e3-9de9-dec6047eb2fe"
+          },
+          {
+            "name": "Selected History Cohort Default Rate",
+            "displayFolder": "Report measures",
+            "expression": "DIVIDE([Defaults in Selected History Cohort], [Selected History Customers])",
+            "formatString": "0.00%",
+            "lineageTag": "0635730e-90d3-4be5-883f-29a9f4bd6fe1"
+          },
+          {
+            "name": "Credit Limit in Selected History Cohort NTD",
+            "displayFolder": "Report measures",
+            "expression": [
+              "VAR CohortIDs = VALUES(monthly_repayments[customer_id])",
+              "RETURN",
+              "    CALCULATE(",
+              "        [Credit Limit NTD],",
+              "        KEEPFILTERS(TREATAS(CohortIDs, customers[customer_id]))",
+              "    )"
+            ],
+            "formatString": "#,0",
+            "lineageTag": "3224ff13-e867-42bc-9536-2cb860ca51ba"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "customers",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\customers.csv\"),",
+                "        [Delimiter=\",\", Columns=28, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"customer_id\", Int64.Type}, {\"credit_limit_ntd\", Int64.Type}, {\"sex_code\", Int64.Type}, {\"education_code\", Int64.Type}, {\"marriage_code\", Int64.Type}, {\"age\", Int64.Type}, {\"sex_label\", type text}, {\"education_label\", type text}, {\"marriage_label\", type text}, {\"has_negative_bill\", Int64.Type}, {\"has_undocumented_repayment_code\", Int64.Type}, {\"history_months\", Int64.Type}, {\"delayed_months\", Int64.Type}, {\"severe_delay_months\", Int64.Type}, {\"unknown_status_months\", Int64.Type}, {\"paid_duly_months\", Int64.Type}, {\"zero_payment_months\", Int64.Type}, {\"total_payment_ntd\", Int64.Type}, {\"latest_repayment_status\", Int64.Type}, {\"latest_bill_amount_ntd\", Int64.Type}, {\"latest_payment_amount_ntd\", Int64.Type}, {\"latest_status_group\", type text}, {\"latest_bill_to_limit\", type number}, {\"credit_limit_band\", type text}, {\"age_band\", type text}, {\"credit_limit_band_order\", Int64.Type}, {\"age_band_order\", Int64.Type}, {\"latest_status_group_order\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "monthly_repayments",
+        "columns": [
+          {
+            "name": "customer_id",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "09583281-83a7-4a36-bc6d-0349341b1899",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "string",
+            "lineageTag": "3a48ae99-4fa7-4ef5-abb3-618413663f81",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "repayment_status",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "8c58b79f-cdb1-448f-ba8c-26613a1827a9",
+            "sourceColumn": "repayment_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "bill_amount_ntd",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "af22d239-f651-4bef-8b57-e6e46e9cac86",
+            "sourceColumn": "bill_amount_ntd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "payment_amount_ntd",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "638a9ebb-1156-47b4-a4de-a1797aff0a97",
+            "sourceColumn": "payment_amount_ntd",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_start",
+            "dataType": "dateTime",
+            "formatString": "MMM yyyy",
+            "lineageTag": "950bc170-d2c6-4e1f-8b6d-933f6f7a7008",
+            "sourceColumn": "month_start",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "repayment_status_group",
+            "dataType": "string",
+            "lineageTag": "d94c545e-4ac9-4fae-bd8b-6b7d435029e4",
+            "sourceColumn": "repayment_status_group",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1c5c92f1-cd60-4a86-8b4a-90811b215a80",
+        "partitions": [
+          {
+            "name": "monthly_repayments",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\monthly_repayments.csv\"),",
+                "        [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"customer_id\", Int64.Type}, {\"month\", type text}, {\"repayment_status\", Int64.Type}, {\"bill_amount_ntd\", Int64.Type}, {\"payment_amount_ntd\", Int64.Type}, {\"month_start\", type date}, {\"repayment_status_group\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "default_outcomes",
+        "columns": [
+          {
+            "name": "customer_id",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "2a5c5958-0d8b-4550-820f-c158bc44cdcc",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "default_next_month",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "lineageTag": "ddc06987-d2e8-4216-9d0b-f9bf0b04b813",
+            "sourceColumn": "default_next_month",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2b2b250b-a8ff-49af-b6a7-ebd1efb36fdc",
+        "partitions": [
+          {
+            "name": "default_outcomes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\default_outcomes.csv\"),",
+                "        [Delimiter=\",\", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"customer_id\", Int64.Type}, {\"default_next_month\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "calendar_months",
+        "columns": [
+          {
+            "name": "month",
+            "dataType": "string",
+            "lineageTag": "8c6ac7e2-99a4-44f3-b8ad-7af7684a9f3e",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_start",
+            "dataType": "dateTime",
+            "formatString": "MMM yyyy",
+            "lineageTag": "0f443f36-abec-4a62-a525-8eec0b7f1a8b",
+            "sourceColumn": "month_start",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_label",
+            "dataType": "string",
+            "lineageTag": "1e4e8cc3-216a-4e6b-b4fe-18ad96e64195",
+            "sortByColumn": "month_order",
+            "sourceColumn": "month_label",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_order",
+            "dataType": "int64",
+            "formatString": "#,0",
+            "isHidden": true,
+            "lineageTag": "335268fc-be61-41d2-b549-9bd1c6422cba",
+            "sourceColumn": "month_order",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "e4a6cb42-ca0d-48e4-be08-848c58829e2e",
+        "partitions": [
+          {
+            "name": "calendar_months",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\calendar_months.csv\"),",
+                "        [Delimiter=\",\", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Typed = Table.TransformColumnTypes(Headers, {{\"month\", type text}, {\"month_start\", type date}, {\"month_label\", type text}, {\"month_order\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

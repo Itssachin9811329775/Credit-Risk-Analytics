@@ -1,0 +1,78 @@
+// Create each measure separately with Modeling > New measure.
+// Table names must match the four CSV filenames without .csv.
+// Fractions are formatted as Percentage in Power BI; do not multiply by 100.
+// Import-mode measures verified against the actual Desktop model in 5 filter scenarios.
+// See reports/powerbi_dax_validation.json for all 90 numerical checks.
+
+Customer Count = COUNTROWS(customers)
+
+Outcome Customers = COUNTROWS(default_outcomes)
+
+Defaulting Customers =
+CALCULATE(
+    COUNTROWS(default_outcomes),
+    KEEPFILTERS(default_outcomes[default_next_month] = 1)
+)
+
+Default Rate = DIVIDE([Defaulting Customers], [Outcome Customers])
+
+Credit Limit NTD = SUM(customers[credit_limit_ntd])
+
+Monthly Rows = COUNTROWS(monthly_repayments)
+
+Monthly Customers = DISTINCTCOUNT(monthly_repayments[customer_id])
+
+Documented Delay Rows =
+CALCULATE(
+    [Monthly Rows],
+    KEEPFILTERS(monthly_repayments[repayment_status] >= 1)
+)
+
+Documented Delay Share = DIVIDE([Documented Delay Rows], [Monthly Rows])
+
+Undocumented Status Rows =
+CALCULATE(
+    [Monthly Rows],
+    KEEPFILTERS(monthly_repayments[repayment_status] IN {-2, 0})
+)
+
+Undocumented Status Share = DIVIDE([Undocumented Status Rows], [Monthly Rows])
+
+Recorded Payments NTD = SUM(monthly_repayments[payment_amount_ntd])
+
+// Use calendar_months fields for month slicers/axes. BLANK with zero or many months.
+Single Month Bill NTD =
+IF(
+    HASONEVALUE(calendar_months[month_start]),
+    SUM(monthly_repayments[bill_amount_ntd]),
+    BLANK()
+)
+
+Negative Bill Rows =
+CALCULATE(
+    [Monthly Rows],
+    KEEPFILTERS(monthly_repayments[bill_amount_ntd] < 0)
+)
+
+Selected History Customers =
+COUNTROWS(VALUES(monthly_repayments[customer_id]))
+
+// Monthly selections intentionally affect this outcome measure, not the base rate.
+Defaults in Selected History Cohort =
+VAR CohortIDs = VALUES(monthly_repayments[customer_id])
+RETURN
+    CALCULATE(
+        [Defaulting Customers],
+        KEEPFILTERS(TREATAS(CohortIDs, default_outcomes[customer_id]))
+    )
+
+Selected History Cohort Default Rate =
+DIVIDE([Defaults in Selected History Cohort], [Selected History Customers])
+
+Credit Limit in Selected History Cohort NTD =
+VAR CohortIDs = VALUES(monthly_repayments[customer_id])
+RETURN
+    CALCULATE(
+        [Credit Limit NTD],
+        KEEPFILTERS(TREATAS(CohortIDs, customers[customer_id]))
+    )

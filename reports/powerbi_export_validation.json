@@ -1,0 +1,277 @@
+{
+  "stage": 6,
+  "status": "passed",
+  "run_at_utc": "2026-11-03T04:37:09.937172+00:00",
+  "checks": [
+    {
+      "name": "Customer dimension key",
+      "passed": true,
+      "detail": "30,000 unique customers"
+    },
+    {
+      "name": "Target separated from history",
+      "passed": true,
+      "detail": "Only default_outcomes contains the future target"
+    },
+    {
+      "name": "Outcome key and coverage",
+      "passed": true,
+      "detail": "One future outcome per customer"
+    },
+    {
+      "name": "Customer-month key",
+      "passed": true,
+      "detail": "No duplicate customer-month pairs"
+    },
+    {
+      "name": "Monthly foreign-key coverage",
+      "passed": true,
+      "detail": "Every monthly customer exists in the dimension, and every customer has history"
+    },
+    {
+      "name": "Calendar key and coverage",
+      "passed": true,
+      "detail": "Six unique first-of-month grouping keys"
+    },
+    {
+      "name": "Monthly histories complete",
+      "passed": true,
+      "detail": "Six months per customer"
+    },
+    {
+      "name": "No missing export values",
+      "passed": true,
+      "detail": "No missing keys, values, labels, or ordering fields"
+    },
+    {
+      "name": "Original customer values preserved",
+      "passed": true,
+      "detail": "Customer labels, raw codes, monetary values, and flags match SQLite"
+    },
+    {
+      "name": "Original monthly values preserved",
+      "passed": true,
+      "detail": "All 180,000 source monthly records match SQLite"
+    },
+    {
+      "name": "Original outcomes preserved",
+      "passed": true,
+      "detail": "All customer outcomes match SQLite"
+    },
+    {
+      "name": "Customer payment totals reconcile",
+      "passed": true,
+      "detail": "Customer-level six-month payment sums match monthly history"
+    },
+    {
+      "name": "History filters do not redefine base outcome",
+      "passed": true,
+      "detail": "Month/status filters require explicit cohort metrics to affect outcome cards"
+    },
+    {
+      "name": "Single-month bill guard",
+      "passed": true,
+      "detail": "Bill snapshots are not summed across history months"
+    },
+    {
+      "name": "Selected cohort reconciles independently",
+      "passed": true,
+      "detail": "The September 2+ delay cohort agrees with the independent customer feature table"
+    },
+    {
+      "name": "Monthly status states partition rows",
+      "passed": true,
+      "detail": "Documented delay, paid duly, and undocumented are separate"
+    },
+    {
+      "name": "customers: CSV round-trip",
+      "passed": true,
+      "detail": "All columns, types, and values survive export"
+    },
+    {
+      "name": "monthly_repayments: CSV round-trip",
+      "passed": true,
+      "detail": "All columns, types, and values survive export"
+    },
+    {
+      "name": "default_outcomes: CSV round-trip",
+      "passed": true,
+      "detail": "All columns, types, and values survive export"
+    },
+    {
+      "name": "calendar_months: CSV round-trip",
+      "passed": true,
+      "detail": "All columns, types, and values survive export"
+    }
+  ],
+  "power_bi_status": "This step validates CSV exports only. Desktop runtime evidence is recorded separately in reports/powerbi_runtime_validation.json.",
+  "provenance": {
+    "database_sha256": "589cb848ccbe71f69d2c0f8ce79875fe9b49340ae5a2e3420dd8a8c4016df1ba",
+    "clean_csv_sha256": "3fb5bfd7af4ee43456996c74a8ec5be3a9057daaaa92a00c522081cae5fe43d2",
+    "source": {
+      "dataset_id": 350,
+      "dataset_title": "Default of Credit Card Clients",
+      "source_page": "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients",
+      "download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+      "resolved_download_url": "https://archive.ics.uci.edu/static/public/350/default%2Bof%2Bcredit%2Bcard%2Bclients.zip",
+      "retrieved_at_utc": "2026-11-02T04:11:04.565456+00:00",
+      "doi": "10.24432/C55S3H",
+      "license": "CC BY 4.0",
+      "files": {
+        "uci_350_original.zip": {
+          "sha256": "56c885f84457f6680f8438f02bfcdac9579323d8a94465ee5f26e32baa727602",
+          "size_bytes": 5539494
+        },
+        "default of credit card clients.xls": {
+          "sha256": "30c6be3abd8dcfd3e6096c828bad8c2f011238620f5369220bd60cfc82700933",
+          "size_bytes": 5539328
+        }
+      }
+    },
+    "validation_checks_passed": 28,
+    "customer_count": 30000,
+    "history_start": "2005-04",
+    "history_end": "2005-09"
+  },
+  "reference_scenarios": {
+    "unfiltered": {
+      "customer_count": 30000,
+      "outcome_customers": 30000,
+      "defaulting_customers": 6636,
+      "default_rate": 0.2212,
+      "credit_limit_ntd": 5024529680,
+      "monthly_rows": 180000,
+      "monthly_customers": 30000,
+      "documented_delay_rows": 25026,
+      "undocumented_status_rows": 120334,
+      "paid_duly_rows": 34640,
+      "recorded_payments_ntd": 949541777,
+      "single_month_bill_ntd": null,
+      "cohort_customers": 30000,
+      "cohort_defaulting_customers": 6636,
+      "cohort_default_rate": 0.2212
+    },
+    "september_only": {
+      "customer_count": 30000,
+      "outcome_customers": 30000,
+      "defaulting_customers": 6636,
+      "default_rate": 0.2212,
+      "credit_limit_ntd": 5024529680,
+      "monthly_rows": 30000,
+      "monthly_customers": 30000,
+      "documented_delay_rows": 6818,
+      "undocumented_status_rows": 17496,
+      "paid_duly_rows": 5686,
+      "recorded_payments_ntd": 169907415,
+      "single_month_bill_ntd": 1536699927,
+      "cohort_customers": 30000,
+      "cohort_defaulting_customers": 6636,
+      "cohort_default_rate": 0.2212
+    },
+    "september_two_plus_delay": {
+      "customer_count": 30000,
+      "outcome_customers": 30000,
+      "defaulting_customers": 6636,
+      "default_rate": 0.2212,
+      "credit_limit_ntd": 5024529680,
+      "monthly_rows": 3130,
+      "monthly_customers": 3130,
+      "documented_delay_rows": 3130,
+      "undocumented_status_rows": 0,
+      "paid_duly_rows": 0,
+      "recorded_payments_ntd": 9894196,
+      "single_month_bill_ntd": 197038144,
+      "cohort_customers": 3130,
+      "cohort_defaulting_customers": 2177,
+      "cohort_default_rate": 0.6955271565495208
+    },
+    "below_50k_september_two_plus_delay": {
+      "customer_count": 4311,
+      "outcome_customers": 4311,
+      "defaulting_customers": 1555,
+      "default_rate": 0.3607051728137323,
+      "credit_limit_ntd": 101982000,
+      "monthly_rows": 853,
+      "monthly_customers": 853,
+      "documented_delay_rows": 853,
+      "undocumented_status_rows": 0,
+      "paid_duly_rows": 0,
+      "recorded_payments_ntd": 1163009,
+      "single_month_bill_ntd": 14489156,
+      "cohort_customers": 853,
+      "cohort_defaulting_customers": 597,
+      "cohort_default_rate": 0.6998827667057445
+    }
+  },
+  "outputs": {
+    "customers": {
+      "path": "data/exports/customers.csv",
+      "rows": 30000,
+      "columns": [
+        "customer_id",
+        "credit_limit_ntd",
+        "sex_code",
+        "education_code",
+        "marriage_code",
+        "age",
+        "sex_label",
+        "education_label",
+        "marriage_label",
+        "has_negative_bill",
+        "has_undocumented_repayment_code",
+        "history_months",
+        "delayed_months",
+        "severe_delay_months",
+        "unknown_status_months",
+        "paid_duly_months",
+        "zero_payment_months",
+        "total_payment_ntd",
+        "latest_repayment_status",
+        "latest_bill_amount_ntd",
+        "latest_payment_amount_ntd",
+        "latest_status_group",
+        "latest_bill_to_limit",
+        "credit_limit_band",
+        "age_band",
+        "credit_limit_band_order",
+        "age_band_order",
+        "latest_status_group_order"
+      ],
+      "sha256": "4cf20b74dd07581f4df9e4b7f9c35627df183265e4eb846e7417c30cd078b270"
+    },
+    "monthly_repayments": {
+      "path": "data/exports/monthly_repayments.csv",
+      "rows": 180000,
+      "columns": [
+        "customer_id",
+        "month",
+        "repayment_status",
+        "bill_amount_ntd",
+        "payment_amount_ntd",
+        "month_start",
+        "repayment_status_group"
+      ],
+      "sha256": "793cb35a5db13604c7ebf85b5f35daf0672750479255643b9957f14be08c6080"
+    },
+    "default_outcomes": {
+      "path": "data/exports/default_outcomes.csv",
+      "rows": 30000,
+      "columns": [
+        "customer_id",
+        "default_next_month"
+      ],
+      "sha256": "cef9f3ac218fdc2795ecbfbdbdba2c88cb91df20e59988aa75205acdf7b6f7f2"
+    },
+    "calendar_months": {
+      "path": "data/exports/calendar_months.csv",
+      "rows": 6,
+      "columns": [
+        "month",
+        "month_start",
+        "month_label",
+        "month_order"
+      ],
+      "sha256": "169314ccabf6549076901da9f5bdd305db0336d7168011dda5ea75d033994da4"
+    }
+  }
+}

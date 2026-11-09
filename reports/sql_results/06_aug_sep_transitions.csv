@@ -1,0 +1,17 @@
+august_status_group,september_status_group,customers,default_customers,default_rate
+1 month delay,1 month delay,28,5,0.17857142857142858
+2+ months delay,1 month delay,1824,775,0.42489035087719296
+2+ months delay,2+ months delay,2139,1526,0.7134174848059841
+2+ months delay,Paid duly (-1),442,167,0.3778280542986425
+2+ months delay,Undocumented -2,5,3,0.6
+Paid duly (-1),1 month delay,612,126,0.20588235294117646
+Paid duly (-1),2+ months delay,126,56,0.4444444444444444
+Paid duly (-1),Paid duly (-1),4641,705,0.15190691661279895
+Paid duly (-1),Undocumented -2,193,17,0.08808290155440414
+Paid duly (-1),Undocumented 0,478,62,0.1297071129707113
+Undocumented -2,1 month delay,1221,346,0.2833742833742834
+Undocumented -2,Undocumented -2,2561,345,0.1347130027333073
+Undocumented 0,1 month delay,3,0,0.0
+Undocumented 0,2+ months delay,865,595,0.6878612716763006
+Undocumented 0,Paid duly (-1),603,82,0.13598673300165837
+Undocumented 0,Undocumented 0,14259,1826,0.12805947121116487

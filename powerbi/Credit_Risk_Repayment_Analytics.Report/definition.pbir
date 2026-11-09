@@ -1,0 +1,8 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../Credit_Risk_Repayment_Analytics.SemanticModel"
+    }
+  }
+}

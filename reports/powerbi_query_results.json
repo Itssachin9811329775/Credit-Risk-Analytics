@@ -1,0 +1,67 @@
+{
+    "query_file":  "C:\\Users\\Sachin\\OneDrive\\Documents\\Desktop\\DS_Project\\powerbi\\validation_queries.dax",
+    "engine":  "Power BI Desktop local Analysis Services / ADOMD.NET",
+    "queried_at_utc":  "2026-11-03T09:20:46.6345114Z",
+    "rows":  [
+                 {
+                     "[Scenario]":  "Baseline",
+                     "[Customers]":  30000,
+                     "[Defaults]":  6636,
+                     "[Rate]":  0.2212,
+                     "[Credit_NTD]":  5024529680,
+                     "[Monthly_rows]":  180000,
+                     "[Cohort_customers]":  30000,
+                     "[Cohort_defaults]":  6636,
+                     "[Cohort_rate]":  0.2212,
+                     "[Single_month_bill_NTD]":  null
+                 },
+                 {
+                     "[Scenario]":  "September",
+                     "[Customers]":  30000,
+                     "[Defaults]":  6636,
+                     "[Rate]":  0.2212,
+                     "[Credit_NTD]":  5024529680,
+                     "[Monthly_rows]":  30000,
+                     "[Cohort_customers]":  30000,
+                     "[Cohort_defaults]":  6636,
+                     "[Cohort_rate]":  0.2212,
+                     "[Single_month_bill_NTD]":  1536699927
+                 },
+                 {
+                     "[Scenario]":  "September / 2+ months delay",
+                     "[Customers]":  30000,
+                     "[Defaults]":  6636,
+                     "[Rate]":  0.2212,
+                     "[Credit_NTD]":  5024529680,
+                     "[Monthly_rows]":  3130,
+                     "[Cohort_customers]":  3130,
+                     "[Cohort_defaults]":  2177,
+                     "[Cohort_rate]":  0.6955271565495208,
+                     "[Single_month_bill_NTD]":  197038144
+                 },
+                 {
+                     "[Scenario]":  "September / 2+ delay / below 50k",
+                     "[Customers]":  4311,
+                     "[Defaults]":  1555,
+                     "[Rate]":  0.36070517281373232,
+                     "[Credit_NTD]":  101982000,
+                     "[Monthly_rows]":  853,
+                     "[Cohort_customers]":  853,
+                     "[Cohort_defaults]":  597,
+                     "[Cohort_rate]":  0.69988276670574445,
+                     "[Single_month_bill_NTD]":  14489156
+                 },
+                 {
+                     "[Scenario]":  "Aug-Sep / 2+ months delay",
+                     "[Customers]":  30000,
+                     "[Defaults]":  6636,
+                     "[Rate]":  0.2212,
+                     "[Credit_NTD]":  5024529680,
+                     "[Monthly_rows]":  7540,
+                     "[Cohort_customers]":  5401,
+                     "[Cohort_defaults]":  3122,
+                     "[Cohort_rate]":  0.578041103499352,
+                     "[Single_month_bill_NTD]":  null
+                 }
+             ]
+}

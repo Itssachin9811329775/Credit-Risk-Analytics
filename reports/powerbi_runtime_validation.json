@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "validated_at_utc": "2026-11-04T08:09:33.242258+00:00",
+  "artifact": "powerbi/Credit_Risk_Repayment_Analytics.pbix",
+  "pbix_bytes": 3355051,
+  "desktop_version": "2.159.1231.0",
+  "saved_using": "Power BI Desktop File > Save As > Power BI file (*.pbix)",
+  "reopened_saved_pbix": true,
+  "zip_integrity": "passed",
+  "imported_data_model_present": true,
+  "pages": [
+    "01 Portfolio",
+    "02 Repayment history",
+    "03 Cohort investigation"
+  ],
+  "visual_count": 39,
+  "visual_review_after_reopen": {
+    "01 Portfolio": "Cards and charts rendered; 30,000 customers, 6,636 defaults, 22.12%.",
+    "02 Repayment history": "Cards, monthly stacked chart with distinct legend colors, and trend rendered; 180,000 rows and 30,000 distinct customers. Bill amount is blank for multiple months.",
+    "03 Cohort investigation": "Cards, three slicers and credit-limit table rendered; baseline 30,000 customers and 6,636 defaults."
+  },
+  "interactive_checks_before_save": [
+    {
+      "selection": "Portfolio: credit limit below 50k",
+      "customers": 4311,
+      "defaults": 1555,
+      "displayed_default_rate_percent": 36.07,
+      "cleared_to_baseline": true
+    },
+    {
+      "selection": "History: August and September",
+      "monthly_rows": 60000,
+      "distinct_customers": 30000,
+      "bill_amount_blank": true,
+      "cleared_to_baseline": true
+    },
+    {
+      "selection": "Cohort: September and 2+ months delay",
+      "customers": 3130,
+      "defaults": 2177,
+      "displayed_default_rate_percent": 69.55,
+      "base_default_rate_percent": 22.12
+    },
+    {
+      "selection": "Same cohort intersected with below 50k credit limit",
+      "customers": 853,
+      "defaults": 597,
+      "displayed_default_rate_percent": 69.99,
+      "base_default_rate_percent": 36.07
+    }
+  ],
+  "dax_validation_after_reopen": {
+    "report": "reports/powerbi_dax_validation.json",
+    "status": "passed",
+    "checks_passed": 90,
+    "measures": 18,
+    "scenarios": 5,
+    "queried_at_utc": "2026-11-04T08:01:43.9710138Z"
+  },
+  "source": "UCI dataset 350; historical Taiwanese credit-card data, April-September 2005; not Finnable data; NTD.",
+  "publication": "Local Desktop report only; not published to Power BI service.",
+  "file_sha256": {
+    "powerbi/Credit_Risk_Repayment_Analytics.pbix": "85cc797afdae3d256eb4706f594d72c9f4aac2989633b447dc66663812e08a96",
+    "reports/powerbi_dax_validation.json": "29ce92c9b451b337d0a7eb63cbb2b4d16b4fefe85b45d3fdcd05566ed67e8862",
+    "reports/powerbi_all_measures_results.json": "3bb539f3621d5c612708bebaf6a4c247ac82ae1b5340e925555260bec7ce49a5",
+    "powerbi/measures.dax": "dfcfab01dc183de9d83b6c43e3d4b1d454c52c6a62dddeac7e2196a42306cef8",
+    "data/exports/calendar_months.csv": "169314ccabf6549076901da9f5bdd305db0336d7168011dda5ea75d033994da4",
+    "data/exports/customers.csv": "4cf20b74dd07581f4df9e4b7f9c35627df183265e4eb846e7417c30cd078b270",
+    "data/exports/default_outcomes.csv": "cef9f3ac218fdc2795ecbfbdbdba2c88cb91df20e59988aa75205acdf7b6f7f2",
+    "data/exports/monthly_repayments.csv": "793cb35a5db13604c7ebf85b5f35daf0672750479255643b9957f14be08c6080"
+  }
+}

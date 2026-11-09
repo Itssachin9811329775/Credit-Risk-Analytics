@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Credit_Risk_Repayment_Analytics"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "67d0b045-94aa-5fe9-a23f-3fb2dc164e93"
+  }
+}
